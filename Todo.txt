@@ -7,6 +7,7 @@ linux   √
 Mac     ？
 Windows ？
 
-3.github cicd集成
-
-4.控制台镂空字体输出
+3.github action
+npm install @serverless-devs/s -g   × 
+s cli registry login                ×
+s cli registry publish              ×
