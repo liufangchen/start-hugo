@@ -1,5 +1,13 @@
 async function preInit(inputObj) {
-    console.log(`HOGO`)
+    console.log(`
+   _    _ _    _  _____  ____  
+  | |  | | |  | |/ ____|/ __ \\ 
+  | |__| | |  | | |  __| |  | |
+  |  __  | |  | | | |_ | |  | |
+  | |  | | |__| | |__| | |__| |
+  |_|  |_|\\____/ \\_____|\\____/ 
+                               
+                               `)
 }
 
 async function postInit(inputObj) {
@@ -12,7 +20,7 @@ async function postInit(inputObj) {
      * 部署前执行请安装go和hugo
          go  : https://golang.google.cn/doc/install
          hugo: https://gohugo.io/getting-started/installing
-       如果遇到npm命令找不到等问题，可以适当进行手动项目构建，并根据需要取消actions内容 
+       
      * 项目初始化完成，您可以直接进入项目目录下，并使用 s deploy 进行项目部署\n`)
 }
 
