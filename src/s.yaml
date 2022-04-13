@@ -1,0 +1,51 @@
+edition: 1.0.0
+name: start-hugo #  项目名称
+access: "{{ access }}" #  秘钥别名
+
+vars: # 全局变量
+  region: "{{ region }}"
+
+services:
+  start-hugo: 
+    component: fc # 组件名称
+    actions:
+      pre-deploy:
+        - run: hugo -D 
+          path: ./code
+        - plugin: website-fc
+    props: # 组件的属性值
+      region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
+      service:
+        name: "{{ serviceName }}"
+        description: "Serverless Devs Website Service"
+      function:
+        name: "{{ functionName }}"
+        description: "Serverless Devs Website hugo Function"
+        codeUri: ./code/public
+        timeout: 30
+        memorySize: 512
+      triggers:
+        - name: httpTrigger
+          type: http
+          config:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      customDomains:
+        - domainName: auto
+          protocol: HTTP
+          routeConfigs:
+            - path: /*
+              methods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
+
+
+
+
+

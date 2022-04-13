@@ -1,0 +1,7 @@
+1.前置条件：go&hugo安装（通过编写插件go-install，hugo-install解决）
+2.测试通过：
+linux   √
+Mac     ？
+Windows ？
+3.github cicd集成
+4.控制台镂空字体输出

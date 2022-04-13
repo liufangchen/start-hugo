@@ -1,0 +1,24 @@
+edition: 1.0.0
+access: "{{ access }}"
+
+vars: # 全局变量
+  region: "{{ region }}"
+
+services:
+  website-hugo:
+    component: oss
+    actions:
+      pre-deploy:
+        - run: hugo -D
+          path: ./code/hugo
+    props:
+      bucket: auto
+      codeUri: ./code/hugo/public
+      region: ${vars.region}
+      website:
+        index: index.html
+        error: 404.html
+        subDirType: index
+      customDomains:
+        - domainName: auto
+          protocol: HTTP
