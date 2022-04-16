@@ -7,7 +7,6 @@
 - [快速开始](#快速开始)
     - [通过应用中心部署](#通过应用中心部署)
     - [通过命令行工具部署](#通过命令行工具部署)
-    - [通过阿里云CloudShell部署](#通过阿里云CloudShell部署)
 - [应用详情](#应用详情)
 - [关于我们](#关于我们)
 
@@ -16,8 +15,7 @@
 # 快速开始
 
 - [:octocat: 源代码](https://github.com/liufangchen/start-hugo)
-- [:earth_africa: 效果预览](
-http://start-hugo.testservice.1401662146685254.cn-hangzhou.fc.devsapp.net/)
+- [:earth_africa: 效果预览](http://start-hugo.testservice.1401662146685254.cn-hangzhou.fc.devsapp.net/)
 
 ## 通过应用中心部署
 
