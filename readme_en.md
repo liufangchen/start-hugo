@@ -14,8 +14,7 @@
 # Quick start
 
 - [:octocat: source](https://github.com/liufangchen/start-hugo)
-- [:earth_africa: Effect Preview](
-http://start-hugo.testservice.1401662146685254.cn-hangzhou.fc.devsapp.net/)
+- [:earth_africa: Effect Preview](http://start-hugo.testservice.1401662146685254.cn-hangzhou.fc.devsapp.net/)
 
 ## Deploy via command line tools
 
