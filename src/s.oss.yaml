@@ -7,18 +7,15 @@ vars: # 全局变量
 services:
   website-hugo:
     component: oss
-    actions:
-      pre-deploy:
-        - run: hugo -D
-          path: ./code/hugo
     props:
-      bucket: auto
-      codeUri: ./code/hugo/public
+      bucket: auto # OSS bucket 自动生成
+      acl: public-read # 读写权限
+      codeUri: ./code/public 
       region: ${vars.region}
-      website:
-        index: index.html
+      website: # OSS 静态网站配置
+        index: index.html # 默认首页
         error: 404.html
         subDirType: index
-      customDomains:
+      customDomains:  # OSS 绑定域名
         - domainName: auto
           protocol: HTTP
